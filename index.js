@@ -1,20 +1,20 @@
-// const math = require ('./math');
-// const hello = require('./hello');
+// const path = require('path');
 
-// const grades = require('./grades');
-// const myGrades =[9,7,12];
-// console.log(grades.calcAverage(myGrades).toFixed(2));
+// const pathToText = path.resolve(__dirname,'assets','text.txt') ;
+// console.log(pathToText);
 
 
-// console.log(hello.sayHi());
-// console.log(hello.sayHello());
+const fs = require('fs');
+fs.readFile('./assets/text.txt', 'utf8' ,(error, data)=>{
+    if (error) {
+        console.log(error);
+        return;
+    }
+    console.log(data);
+});
 
 
-// const number1= 23;
-// const number2 =43;
-// console.log(math.sub(number1, number2));
-
-const countDown = require('./countDown');
-countDown.startCountDown(4);
 
 
+
+ 
